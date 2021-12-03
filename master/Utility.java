@@ -25,6 +25,6 @@ public class Utility{
         new PlayerPartyEntity("White Mage",new Move[] {WHM_GLARE,WHM_HOLY,WHM_TEMPERANCE,WHM_SOLACE}, 171 , 210, 157, 50),
         new PlayerPartyEntity("Ninja",new Move[] {NIN_HAKKE_MUJINSATSU, NIN_HYOSHO_RANRYU, NIN_GOKA_MEKKYAKU, NIN_BUNSHIN}, 200 , 326, 171,80),
         new PlayerPartyEntity("Black Mage",new Move[] {BLM_DESPAIR,BLM_FLARE,BLM_XENOGLOSSY, BLM_LEYLINES}, 150 , 539, 100, 35)
-        //new Pokemon("Banette",new Move[] {SHADOWBALL,ENERGYBALL}, 238 , 235, 135, 135),                           
+                                
     };
 }

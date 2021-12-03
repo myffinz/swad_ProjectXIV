@@ -11,7 +11,5 @@ public interface PlayerPartyInterface {
     public Move selectAttackMove(PlayerInterface trainer);
     public Move getMove(int value);
     public String getName();
-    public String movesToString();
-    //public PokemonInterface clonePokemon();
-	
+    public String movesToString();	
 }

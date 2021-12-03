@@ -67,19 +67,18 @@ public class PlayerBattle implements BattleInterface {
         }
     }
     
-    private void attack(PlayerInterface attackerTrainer, PlayerPartyInterface attacker, PlayerInterface victimTrainer, PlayerPartyInterface victim) {
-        System.out.println("----------- "+attackerTrainer.getName()+"'s "+attacker.getName()+"'s attacking turn -----------");
-        Move attackerMove = attacker.selectAttackMove(attackerTrainer);
+    private void attack(PlayerInterface attackerPC, PlayerPartyInterface attacker, PlayerInterface victimPC, PlayerPartyInterface victim) {
+        System.out.println("----------- "+attackerPC.getName()+"'s "+attacker.getName()+"'s attacking turn -----------");
+        Move attackerMove = attacker.selectAttackMove(attackerPC);
         int damage = victim.takeHit(attacker, attackerMove);
-        System.out.println(attackerTrainer.getName()+"'s "+attacker.getName() + " uses "+attackerMove.name+", dealing "+damage+" HP.");
+        System.out.println(attackerPC.getName()+"'s "+attacker.getName() + " uses "+attackerMove.name+", dealing "+damage+" HP.");
         if(victim.checkDeadStatus()) {
-            System.out.println(victimTrainer.getName()+"'s "+victim.getName()+" has reach 0 HP.");
+            System.out.println(victimPC.getName()+"'s "+victim.getName()+" has reach 0 HP.");
         } else {
-            System.out.println(victimTrainer.getName()+"'s "+victim.getName()+"'s HP: "+victim.getHPStat());
+            System.out.println(victimPC.getName()+"'s "+victim.getName()+"'s HP: "+victim.getHPStat());
         }
     }
     
-    // Set currentPokemon to the new one if the current one is dead
     protected void phase3DetermineResult() {
         determineResult(party1);
         determineResult(party2);
@@ -92,8 +91,6 @@ public class PlayerBattle implements BattleInterface {
         }
     }
     
-    // (1) Determine whether the battle is over
-    // (2) Print out the name of the winner
     protected boolean phase4IsBattleOver() {
         System.out.println("<<<<<<< Ending Round "+round+" >>>>>>>");
         if(party1.isDefeated()) {
