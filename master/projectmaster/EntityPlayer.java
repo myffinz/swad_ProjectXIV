@@ -1,5 +1,4 @@
 package projectmaster;
-
 import java.util.Scanner;
 
 public class EntityPlayer extends AbstractPlayerParty {

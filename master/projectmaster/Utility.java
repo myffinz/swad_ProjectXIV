@@ -31,7 +31,6 @@ public class Utility{
     protected static Move SMN_AKH_MORN = new Move(Type.MAGICAL_DMG, 200, 0, "Akh Morn");
 
 
-
     protected static final PlayerPartyInterface[] ALL_CLASSES = {
         new PlayerPartyEntity("Paladin",new Move[] {PLD_BLADE_OF_VALOR,PLD_BLADE_OF_FAITH, PLD_HOLYSHIELD, PLD_HOLY_CIRCLE}, 773 , 137, 373, 40),
         //new PlayerPartyEntity("Warrior",new Move[] {PLD_BLADE_OF_VALOR,PLD_BLADE_OF_FAITH, PLD_HOLYSHIELD, PLD_HOLY_CIRCLE}, 300 , 137, 273, 40),
@@ -45,18 +44,11 @@ public class Utility{
         new PlayerPartyEntity("Summoner",new Move[] {SMN_ASTRAL_FLRE,SMN_BAHAMUT,SMN_CRIM_STRKE, SMN_AKH_MORN}, 349 , 487, 146, 45),
         //new PlayerPartyEntity("Red Mage",new Move[] {RDM_XXX,RDM_XXX,RDM_XXX, RDM_XXX}, 380 , 458, 160, 55)                                
     };
-
-    protected static final MobEntityInterface[] ALL_MOBS = {
-        new PlayerPartyEntity("Imperial Legatus",new Move[] {PLD_BLADE_OF_VALOR,PLD_BLADE_OF_FAITH, PLD_HOLYSHIELD, PLD_HOLY_CIRCLE}, 513 , 37, 173, 40),
-        //new PlayerPartyEntity("Warrior",new Move[] {PLD_BLADE_OF_VALOR,PLD_BLADE_OF_FAITH, PLD_HOLYSHIELD, PLD_HOLY_CIRCLE}, 300 , 137, 273, 40),
+    protected static final PlayerPartyInterface[] ALL_MOBS = {
+        new PlayerPartyEntity("Imperial Legatus",new Move[] {PLD_BLADE_OF_VALOR,PLD_BLADE_OF_FAITH, PLD_HOLYSHIELD, PLD_HOLY_CIRCLE}, 513 , 87, 173, 50),
         new PlayerPartyEntity("Imperial Conjiflex",new Move[] {WHM_GLARE,WHM_HOLY,WHM_TEMPERANCE,WHM_SOLACE}, 281 , 310, 157, 50),
-        //new PlayerPartyEntity("Astrologian",new Move[] {AST_XXX,AST_XXX,AST_XXX, AST_XXX}, 375 , 380, 163, 55),
-        //new PlayerPartyEntity("Sage",new Move[] {SGE_XXX,SGE_XXX,SGE_XXX, SGE_XXX}, 360 , 430, 130, 62),
-        //new PlayerPartyEntity("Dragoon",new Move[] {DRG_XXX,DRG_XXX,DRG_XXX, DRG_XXX}, 510, 330, 195,80),
-        new PlayerPartyEntity("Imperial Shinobi",new Move[] {NIN_HAKKE_MUJINSATSU, NIN_HYOSHO_RANRYU, NIN_GOKA_MEKKYAKU, SAM_TENKA_GOKEN}, 335 , 226, 131, 80),
-        new PlayerPartyEntity("Imperial Gunnin",new Move[] {NIN_HAKKE_MUJINSATSU, SAM_TENKA_GOKEN, SAM_MIDARE_SETSUGEKKA, SAM_NAMIKIRI}, 387 , 240, 155, 60),
-        new PlayerPartyEntity("Imperial Signaler",new Move[] {BLM_DESPAIR,BLM_FLARE,SMN_ASTRAL_FLRE, SMN_CRIM_STRKE}, 217 , 339, 50, 40),
-        //new PlayerPartyEntity("Summoner",new Move[] {SMN_ASTRAL_FLRE,SMN_BAHAMUT,SMN_CRIM_STRKE, SMN_AKH_MORN}, 349 , 487, 146, 45),
-        //new PlayerPartyEntity("Red Mage",new Move[] {RDM_XXX,RDM_XXX,RDM_XXX, RDM_XXX}, 380 , 458, 160, 55)                                
+        new PlayerPartyEntity("Imperial Shinobi",new Move[] {NIN_HAKKE_MUJINSATSU, NIN_HYOSHO_RANRYU, NIN_GOKA_MEKKYAKU, SAM_TENKA_GOKEN}, 335 , 226, 131, 88),
+        new PlayerPartyEntity("Imperial Gunnin",new Move[] {NIN_HAKKE_MUJINSATSU, SAM_TENKA_GOKEN, SAM_MIDARE_SETSUGEKKA, SAM_NAMIKIRI}, 387 , 240, 155, 71),
+        new PlayerPartyEntity("Imperial Signaler",new Move[] {BLM_DESPAIR,BLM_FLARE,SMN_ASTRAL_FLRE, SMN_CRIM_STRKE}, 217 , 339, 50, 45),                            
     };
 }

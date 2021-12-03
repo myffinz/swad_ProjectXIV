@@ -4,7 +4,7 @@ public class Move implements MoveInterface {
     protected Type type;
     protected int baseDamage;
     protected String name;
-    protected int MPCost;
+    //protected int M
 
     public Move(Type type, int baseDamage, int MPCost, String name){
         if(baseDamage < 0)
@@ -14,7 +14,7 @@ public class Move implements MoveInterface {
         this.type = type;
         this.baseDamage = baseDamage;
         this.name = name;
-        this.MPCost = MPCost;
+        //this.MPCost = MPCost;
     }
     @Override
     public Type getType(){
