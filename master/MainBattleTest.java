@@ -2,7 +2,7 @@ package projectmaster;
 
 import java.io.ByteArrayInputStream;
 import java.util.Scanner;
-public class Test1 {
+public class MainBattleTest {
     public static void main(String[] args) throws Exception {
         
         PlayerPartyInterface[] A1LP = {Utility.ALL_CLASSES[0]};
