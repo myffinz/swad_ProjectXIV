@@ -33,7 +33,7 @@ public class PlayerBattle implements BattleInterface {
         round++;
         System.out.println();
         System.out.println();
-        System.out.println("======================Round "+round+"======================");
+        System.out.println("======================Turn "+round+"======================");
         printRoundInfo(party1);
         printRoundInfo(party2);
     }
@@ -41,7 +41,7 @@ public class PlayerBattle implements BattleInterface {
     protected void printRoundInfo(PlayerInterface t) {
         PlayerPartyInterface c = t.getCurrentPartyMember();
         System.out.println(t.getName()+" has "+t.getNumAlivePlayers()+
-                " members and is now a "+c.getName()+" (HP = "+c.getHPStat()+")");
+                " party members and the current class is "+c.getName()+" (HP = "+c.getHPStat()+")");
     }
     
     protected void phase2TakeAction() {
@@ -68,7 +68,7 @@ public class PlayerBattle implements BattleInterface {
     }
     
     private void attack(PlayerInterface attackerPC, PlayerPartyInterface attacker, PlayerInterface victimPC, PlayerPartyInterface victim) {
-        System.out.println("----------- "+attackerPC.getName()+"'s "+attacker.getName()+"'s attacking turn -----------");
+        System.out.println("----------- "+attackerPC.getName()+"'s attacking turn -----------");
         Move attackerMove = attacker.selectAttackMove(attackerPC);
         int damage = victim.takeHit(attacker, attackerMove);
         System.out.println(attackerPC.getName()+" uses "+attackerMove.name+", dealing "+damage+" HP.");
@@ -92,7 +92,7 @@ public class PlayerBattle implements BattleInterface {
     }
     
     protected boolean phase4IsBattleOver() {
-        System.out.println("<<<<<<< Ending Round "+round+" >>>>>>>");
+        System.out.println("<<<<<<< Ending Turn "+round+" >>>>>>>");
         if(party1.isDefeated()) {
             printWinner(party2, party1);
             return true;

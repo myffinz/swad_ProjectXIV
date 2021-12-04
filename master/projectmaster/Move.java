@@ -29,13 +29,4 @@ public class Move implements MoveInterface {
     public int getMPCost(){
         return this.MPCost;
     } 
-    // public boolean isMagic(Type move){
-    //     return (move==Type.MAGICAL_DMG) ? true : false;
-    // }
-    // public boolean isHeal(Type move){
-    //     return (move==Type.HEAL) ? true : false;
-    // }
-    // public boolean isATKBuff(Type move){
-    //     return (move==Type.ATK_BUFF) ? true : false;
-    // }
 }
