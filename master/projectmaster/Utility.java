@@ -3,11 +3,12 @@ package projectmaster;
 public class Utility{
     protected static Move PLD_BLADE_OF_VALOR = new Move(Type.PHYSICAL_DMG, 50, 0, "Blade of Valor");
     protected static Move PLD_BLADE_OF_FAITH = new Move(Type.PHYSICAL_DMG, 90,0, "Blade of Faith");
-    protected static Move PLD_HOLYSHIELD = new Move(Type.DEF_BUFF, 20, 1000, "Holy Sheltro");
+    protected static Move PLD_HOLYSHIELD = new Move(Type.DEF_BUFF, 20, 1000, "Holy Sheltron");
     protected static Move PLD_HOLY_CIRCLE = new Move(Type.HEAL, 20, 5000, "Holy Circle");
+    protected static Move PLD_RAGE_OF_HALONE = new Move(Type.HEAL, 20, 5000, "Rage of Halone");
     //protected static Move WAR_BLADE_OF_VALOR = new Move(Type.PHYSICAL_DMG, 50, 0, "Blade of Valor");
     //protected static Move WAR_BLADE_OF_FAITH = new Move(Type.PHYSICAL_DMG, 90,0, "Blade of Faith");
-    // static Move WAR_HOLYSHIELD = new Move(Type.DEF_BUFF, 20, 1000, "Holy Sheltro");
+    //protected static Move WAR_HOLYSHIELD = new Move(Type.DEF_BUFF, 20, 1000, "Holy Sheltro");
     //protected static Move WAR_HOLY_CIRCLE = new Move(Type.HEAL, 20, 5000, "Holy Circle");
     protected static Move WHM_GLARE = new Move(Type.MAGICAL_DMG, 80, 400, "Glare");
     protected static Move WHM_HOLY = new Move(Type.MAGICAL_DMG, 90, 600, "Holy");
@@ -19,7 +20,7 @@ public class Utility{
     protected static Move NIN_BUNSHIN = new Move(Type.ATK_BUFF, 100,0, "Bunshin Kamaitachi");
     protected static Move SAM_HIGANBANA = new Move(Type.PHYSICAL_DMG, 60,0, "Higanbana");
     protected static Move SAM_TENKA_GOKEN = new Move(Type.PHYSICAL_DMG, 75,0, "Tenka Goken");
-    protected static Move SAM_MIDARE_SETSUGEKKA= new Move(Type.PHYSICAL_DMG, 120,1500, "	Kaeshi: Setsugekka");
+    protected static Move SAM_MIDARE_SETSUGEKKA= new Move(Type.PHYSICAL_DMG, 120,1500, "Kaeshi: Setsugekka");
     protected static Move SAM_NAMIKIRI = new Move(Type.PHYSICAL_DMG, 300,3000, "Kaeshi: Namikiri");
     protected static Move BLM_DESPAIR = new Move(Type.MAGICAL_DMG, 130, 4000, "Despair");
     protected static Move BLM_FLARE = new Move(Type.MAGICAL_DMG, 85, 2000, "Flare");
@@ -46,7 +47,7 @@ public class Utility{
     };
     protected static final PlayerPartyInterface[] ALL_MOBS = {
         new PlayerPartyEntity("Imperial Legatus",new Move[] {PLD_BLADE_OF_VALOR,PLD_BLADE_OF_FAITH, PLD_HOLYSHIELD, PLD_HOLY_CIRCLE}, 513 , 87, 173, 50),
-        new PlayerPartyEntity("Imperial Conjiflex",new Move[] {WHM_GLARE,WHM_HOLY,WHM_TEMPERANCE,WHM_SOLACE}, 281 , 310, 157, 50),
+        new PlayerPartyEntity("Imperial Conjiflex",new Move[] {WHM_SOLACE,WHM_HOLY,WHM_TEMPERANCE,WHM_GLARE}, 281 , 310, 157, 50),
         new PlayerPartyEntity("Imperial Shinobi",new Move[] {NIN_HAKKE_MUJINSATSU, NIN_HYOSHO_RANRYU, NIN_GOKA_MEKKYAKU, SAM_TENKA_GOKEN}, 335 , 226, 131, 88),
         new PlayerPartyEntity("Imperial Gunnin",new Move[] {NIN_HAKKE_MUJINSATSU, SAM_TENKA_GOKEN, SAM_MIDARE_SETSUGEKKA, SAM_NAMIKIRI}, 387 , 240, 155, 71),
         new PlayerPartyEntity("Imperial Signaler",new Move[] {BLM_DESPAIR,BLM_FLARE,SMN_ASTRAL_FLRE, SMN_CRIM_STRKE}, 217 , 339, 50, 45),                            

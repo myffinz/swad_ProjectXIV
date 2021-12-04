@@ -1,5 +1,7 @@
 package projectmaster;
 
+import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+
 public class PlayerPartyEntity implements PlayerPartyInterface{
     protected String name;
     protected Move[] move;
@@ -7,6 +9,7 @@ public class PlayerPartyEntity implements PlayerPartyInterface{
     protected int attack;
     protected int defense;
     protected int speed; 
+    protected int MP;
 
     public PlayerPartyEntity(){
 
@@ -26,6 +29,7 @@ public class PlayerPartyEntity implements PlayerPartyInterface{
         this.attack = attack;
         this.defense = defense;
         this.speed = speed;
+        this.MP = 10000;
     }
     @Override
     public int getAttackStat(){
@@ -40,11 +44,27 @@ public class PlayerPartyEntity implements PlayerPartyInterface{
     public int getSpeedStat(){
         return this.speed;
     }
+
     public int takeHit(PlayerPartyInterface p, MoveInterface move){
-        int hitDamage = (int)  move.getBaseDamage()*p.getAttackStat()/this.getDefenseStat();
-        this.hp -= hitDamage;
+        int hitDamage = 0;
+        if(move.getType()==Type.MAGICAL_DMG){
+            hitDamage = (int)  move.getBaseDamage()*p.getAttackStat()/this.getDefenseStat();
+            this.MP -= move.getMPCost();
+            this.hp -= hitDamage;
+        }  
+        else if(move.getType()==Type.HEAL){
+            this.hp += move.getBaseDamage();
+        }
+        else if(move.getType()==Type.ATK_BUFF){
+            this.attack += move.getBaseDamage();
+        }
+        else{
+            hitDamage = (int)  move.getBaseDamage()*p.getAttackStat()/this.getDefenseStat();
+            this.hp -= hitDamage;
+        }
         return hitDamage;
     }
+    
     public boolean checkDeadStatus(){
         return (hp <= 0) ? true : false;
     }
@@ -62,6 +82,7 @@ public class PlayerPartyEntity implements PlayerPartyInterface{
         }
         return movesList;
     }
+
     @Override
     public Move selectAttackMove(PlayerInterface player) {
         return player.selectMove(this);
