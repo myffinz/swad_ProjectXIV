@@ -71,11 +71,11 @@ public class PlayerBattle implements BattleInterface {
         System.out.println("----------- "+attackerPC.getName()+"'s "+attacker.getName()+"'s attacking turn -----------");
         Move attackerMove = attacker.selectAttackMove(attackerPC);
         int damage = victim.takeHit(attacker, attackerMove);
-        System.out.println(attackerPC.getName()+"'s "+attacker.getName() + " uses "+attackerMove.name+", dealing "+damage+" HP.");
+        System.out.println(attackerPC.getName()+" uses "+attackerMove.name+", dealing "+damage+" HP.");
         if(victim.checkDeadStatus()) {
             System.out.println(victimPC.getName()+"'s "+victim.getName()+" has reach 0 HP.");
         } else {
-            System.out.println(victimPC.getName()+"'s "+victim.getName()+"'s HP: "+victim.getHPStat());
+            System.out.println(victimPC.getName()+"'s "+victim.getName()+"'s HP: "+victim.getHPStat());            
         }
     }
     

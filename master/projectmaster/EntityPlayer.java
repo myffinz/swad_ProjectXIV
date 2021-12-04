@@ -11,7 +11,7 @@ public class EntityPlayer extends AbstractPlayerParty {
 
     @Override
     public Move selectMove(PlayerPartyInterface p){
-        System.out.print("What move do you want to select: "+p.movesToString());
+        System.out.print("What skill do you want to use: "+p.movesToString());
         return p.getMove(this.userInput.nextInt());
     }
 

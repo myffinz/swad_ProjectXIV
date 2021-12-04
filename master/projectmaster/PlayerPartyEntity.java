@@ -1,7 +1,5 @@
 package projectmaster;
 
-import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
-
 public class PlayerPartyEntity implements PlayerPartyInterface{
     protected String name;
     protected Move[] move;
@@ -15,7 +13,7 @@ public class PlayerPartyEntity implements PlayerPartyInterface{
 
     }
     public PlayerPartyEntity(String name, Move[] move, int hp, int attack, int defense, int speed){
-        if(hp<=0 || attack < 0 || defense < 0){
+        if(hp<=0 || attack < 0 || defense < 0 || speed < 0){
             throw new IllegalArgumentException("Invalid value | values can't be below 0");
         }
         else if(move.length != NUM_MOVES)
@@ -58,10 +56,14 @@ public class PlayerPartyEntity implements PlayerPartyInterface{
         else if(move.getType()==Type.ATK_BUFF){
             this.attack += move.getBaseDamage();
         }
+        else if(move.getType()==Type.DEF_BUFF){
+            this.defense += move.getBaseDamage();
+        }
         else{
             hitDamage = (int)  move.getBaseDamage()*p.getAttackStat()/this.getDefenseStat();
             this.hp -= hitDamage;
         }
+        if(this.MP < 10000) this.MP += 1000;
         return hitDamage;
     }
     
